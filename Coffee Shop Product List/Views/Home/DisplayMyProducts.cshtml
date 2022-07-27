@@ -1,0 +1,37 @@
+﻿@model Products[]
+
+
+<p>This is the list of my Products there are @Model.Length products at my humble coffee shop  </p>
+
+<table> 
+    <th>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Price</td>
+
+
+
+
+    </th>
+
+    @{
+        foreach (var currProduct in @Model)
+        {
+            <tr>
+                <td><a href="MyProductDetails?id=@currProduct.ID">@currProduct.Name</a></td>
+                <td>@currProduct.Description</td>
+                <td>$@currProduct.price</td>
+            
+            
+            </tr>
+        }
+
+
+
+    }
+
+
+
+</table>
+
+
